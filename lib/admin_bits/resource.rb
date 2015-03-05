@@ -27,6 +27,7 @@ module AdminBits
 
     def include_sorting_class
       if resource_class.ancestors.include? ActiveRecord::Base
+        self.class.send :include, ActiveRecordFilter
         self.class.send :include, ActiveRecordSort
       else
         self.class.send :include, PlainSort

@@ -1,6 +1,8 @@
 class Admin::ItemsController < Admin::BaseController
 
   def index
+    params['filters'] = {'price_filter' => {'greather_than' => 30}}
+    resource.default_active_record_filters
     @items = resource.fetch_for_index
   end
 

@@ -5,6 +5,7 @@ module AdminBits
   autoload :Helpers,                 'admin_bits/helpers'
   autoload :ParamsHandler,           'admin_bits/params_handler'
   autoload :PathHandler,             'admin_bits/params_handler/path_handler'
+  autoload :ActiveRecordFilter,      'admin_bits/filters/active_record_filter'
   autoload :ActiveRecordSort,        'admin_bits/sorting/active_record_sort'
   autoload :PlainSort,               'admin_bits/sorting/plain_sort'
   autoload :Controller,              'admin_bits/controller'
